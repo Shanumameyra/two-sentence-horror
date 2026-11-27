@@ -10,6 +10,17 @@
 - Account: @rapid-pika-70, wallet 8QhbYm7kNGpZ2FsrtVL1unDtK2KE7pcKcfXRfnZKu4jr
 - Build start: 2026-11-27 11:13 WIB
 - Repo: Shanumameyra/two-sentence-horror
+- Commit SHA: fe33002a6ee9df9e0cdded9e1a8791bba9ab8e98 (pushed, verified on remote via ls-remote + gh api contents; main.py sha256 matches local)
+- GitHub About: homepage https://make.fun/bounty/u-suroto-two-sentence-horror-acea9253, topic makefun, public
+
+## Verification
+
+- Fresh run: `python3 main.py` → exit 0, "wrote 260 characters to /output/entry.txt";
+  output byte-identical to expected story (sha256 71b586a82e4c3b1fde37629b3c19fb366fd269c811914df4953c707b73b2396c), 260 chars, exactly 2 sentences.
+- Read-only sim (bind-mount ro over /output): exit 0, warning printed,
+  harness sentinel file untouched.
+- README: 3 linked make.fun badges verified on remote. LICENSE: MIT +
+  SPDX-License-Identifier: MIT. .makefun/owner.json: wallet 8Qhb…u4jr verified on remote.
 - Entrypoint: main.py (Python, deterministic, offline)
 - Gate: /output/entry.txt, 1-400 chars UTF-8, not whitespace-only
 - Judge: house judge (z-ai/glm-5.3-flash), pairwise, criteria: exactly two
